@@ -27,7 +27,7 @@ def marionette(request):
     marionette.start_session()
     request.node._marionette = marionette
     yield marionette
-    marionette.delete_session()
+    marionette.cleanup()
 
 
 @pytest.fixture
